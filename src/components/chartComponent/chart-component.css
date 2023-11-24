@@ -1,0 +1,74 @@
+.card-layout {
+  display: flex;
+  width: 320px;
+  padding: 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--gray-gray-1, #e8e7e7);
+  background: var(--bw-white, #fff);
+}
+
+.card-inner-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.first-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: space-between;
+  align-self: stretch;
+}
+
+.second-row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 4px;
+}
+
+.dotted-line {
+  border-top: 1px dotted #000; /* Adjust the color as needed */
+  width: 100%;
+  margin: 20px 0; /* Adjust margin as needed */
+}
+
+.heading {
+  color: var(--dark-dark-5, #221f20);
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 12px; /* 150% */
+  letter-spacing: 1px;
+  margin-left: 5px;
+}
+
+.second-row .heading {
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 12px; /* 120% */
+  letter-spacing: 0.25px;
+}
+
+.color-black {
+  color: var(--dark-dark-5, #221f20);
+}
+
+.color-green {
+  color: var(--green-green-7, #77a06c);
+}
+
+.chart-div {
+  margin-left: -40px;
+}
+
+
