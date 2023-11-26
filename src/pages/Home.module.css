@@ -1,0 +1,8 @@
+.resultContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+  margin: 20px 40px;
+}
