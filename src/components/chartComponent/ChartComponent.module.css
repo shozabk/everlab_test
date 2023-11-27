@@ -11,6 +11,11 @@
   background: var(--bw-white, #fff);
 }
 
+.flex {
+  display: flex;
+  align-items: center;
+}
+
 .cardInnerLayout {
   display: flex;
   flex-direction: column;

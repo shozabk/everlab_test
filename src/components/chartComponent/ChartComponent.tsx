@@ -2,6 +2,7 @@
 /* eslint-disable react/self-closing-comp */
 import { FC } from 'react';
 import { LineChart, CartesianGrid, XAxis, YAxis, Line } from 'recharts';
+import { Text } from '@mantine/core';
 
 import { DotIcon, SeeMoreIcon } from './components/svgs';
 import chart from './ChartComponent.module.css';
@@ -56,22 +57,22 @@ const ChartComponent: FC<ChartComponentI> = ({ result }) => {
     <div className={chart.cardLayout}>
       <div className={chart.cardInnerLayout}>
         <div className={chart.firstRow}>
-          <span>
+          <span className={chart.flex}>
             <DotIcon size={8} color={status === 'optimal' ? greenColor : redColor} />
-            <span className={chart.heading}>{status}</span>
+            <Text className={chart.heading}>{status}</Text>
           </span>
           <SeeMoreIcon />
         </div>
         <div className={chart.secondRow}>
-          <span className={`${chart.heading2} ${chart.colorBlack}`}>{name}</span>
+          <Text className={`${chart.heading2} ${chart.colorBlack}`}>{name}</Text>
           <DotIcon size={5} color="black" />
-          <span
+          <Text
             className={`${chart.heading2} ${
               status === 'optimal' ? chart.colorGreen : chart.colorRed
             }`}
           >
             {value}
-          </span>
+          </Text>
         </div>
         <div className={chart.chartDiv}>
           <LineChart
@@ -84,10 +85,10 @@ const ChartComponent: FC<ChartComponentI> = ({ result }) => {
               bottom: 5,
             }}
           >
-            <CartesianGrid strokeDasharray="10 10" vertical={false} />
+            <CartesianGrid strokeDasharray="7 7" vertical={false} />
             <XAxis
               dataKey="monthYear"
-              axisLine={{ strokeDasharray: '10 10', stroke: greenColor }}
+              axisLine={{ strokeDasharray: '7 7', stroke: greenColor }}
               tick={false}
               style={{ color: greenColor }}
             />
