@@ -23,6 +23,7 @@ const ChartComponent: FC<ChartComponentI> = ({ result }) => {
     const { uv, monthYear } = payload;
     const isLastPoint = index === chartData.length - 1;
     const selectedColor = '#221F20';
+    const selectedFontColor = '#737985';
 
     if (isLastPoint) {
       return (
@@ -30,7 +31,7 @@ const ChartComponent: FC<ChartComponentI> = ({ result }) => {
           <circle cx={cx} cy={cy} r={6} stroke={selectedColor} fill="#fff" strokeWidth={2} />
           <line
             x1={cx}
-            y1={cy}
+            y1={cy + 5}
             x2={cx}
             y2={cy + uv * 5 + 50}
             stroke={selectedColor}
@@ -41,7 +42,8 @@ const ChartComponent: FC<ChartComponentI> = ({ result }) => {
             x={cx}
             y={cy + uv * 5 + 60}
             textAnchor="middle"
-            fill={selectedColor}
+            fill={selectedFontColor}
+            style={{ fontSize: '10px', fontWeight: '600' }}
           >{`${monthYear}`}</text>
         </g>
       );
@@ -90,7 +92,7 @@ const ChartComponent: FC<ChartComponentI> = ({ result }) => {
               ticks={yTicks}
               axisLine={false}
               tick={{
-                color: greenColor,
+                fill: greenColor,
                 fontSize: '12px',
                 fontWeight: '600',
               }}
