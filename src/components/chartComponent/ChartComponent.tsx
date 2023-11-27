@@ -84,13 +84,19 @@ const ChartComponent: FC<ChartComponentI> = ({ result }) => {
               bottom: 5,
             }}
           >
-            <CartesianGrid strokeDasharray="3 3" vertical={false} />
-            <XAxis dataKey="monthYear" axisLine={{ strokeDasharray: '3 3' }} tick={false} />
+            <CartesianGrid strokeDasharray="10 10" vertical={false} />
+            <XAxis
+              dataKey="monthYear"
+              axisLine={{ strokeDasharray: '10 10', stroke: greenColor }}
+              tick={false}
+              style={{ color: greenColor }}
+            />
             <YAxis
               type="number"
               domain={yTicks}
               ticks={yTicks}
               axisLine={false}
+              style={{ color: greenColor }}
               tick={{
                 fill: greenColor,
                 fontSize: '12px',
